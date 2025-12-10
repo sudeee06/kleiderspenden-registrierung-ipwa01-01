@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kleiderspenden-Registrierung</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="Bilder/logo-kleiderherz-spenden-teilen.png"
+        alt="Kleiderherz-Logo"
+      />
+      <h1>Offizielles Kleiderspenderportal</h1>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="registrierung.html">Registrierung</a></li>
+          <li><a href="spenden.html">Spendenübersicht</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Willkommen beim offiziellen Kleiderspenderportal!</h2>
+        <p>
+          Hier können Sie Ihre Kleiderspenden einfach und bequem registrieren.
+          Gemeinsam machen wir die Welt ein Stück besser:D
+        </p>
+        <a href="registrierung.html" class="button">Jetzt spenden</a>
+      </section>
+
+      <form id="Spendenformular">
+        <h2>Registrieren Sie Ihre Kleiderspende</h2>
+        <h3>Übergabeart wählen:</h3>
+
+        <input
+          type="radio"
+          id="abholung"
+          name="uebergabeart"
+          value="abholung"
+          required
+        />
+        <label for="abholung">Abholung durch Sammelfahrzeug</label><br />
+        <input
+          type="radio"
+          id="geschaeftsstelle"
+          name="uebergabeart"
+          value="geschaeftsstelle"
+        />
+        <label for="geschaeftsstelle"
+          >Persönliche Übergabe an der Geschäftsstelle</label
+        ><br />
+
+        <label for="krisengebiet">Krisengebiet auswählen:</label>
+        <input
+          type="text"
+          id="krisengebiet"
+          name="krisengebiet"
+          required
+        /><br />
+
+        <div id="abholadresse" style="display: none">
+          <label for="plz">Postleitzahl (PLZ):</label>
+          <input type="text" id="plz" name="plz" required /><br />
+        </div>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="kleiderspende">Beschreibung der Kleiderspende:</label>
+        <textarea id="kleiderspende" name="kleiderspende" required></textarea>
+
+        <button type="submit">Spende registrieren</button>
+      </form>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="imperssum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2024 Kleiderherz. Alle Rechte vorbehalten.</p>
+    </footer>
+  </body>
 </html>
