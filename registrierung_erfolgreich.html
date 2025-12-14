@@ -13,24 +13,19 @@
   </head>
   <body>
     <header>
-      
-       <img
+      <img
         src="/Bilder/logo-kleiderherz-spenden-teilen.png.png"
         alt="Kleiderherz Logo"
       />
-      
 
-      <h1>
-        Kleiderspendenportal
-       
-      </h1>
+      <h1>Kleiderspendenportal</h1>
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
       <nav>
         <ul>
           <li><a href="index.html">Startseite</a></li>
           <li><a href="registrierung.html">Registrierung</a></li>
-          <li><a href="spenden.html">Spendenübersicht</a></li>
+          <li><a href="spendenübersicht.html">Spendenübersicht</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
@@ -40,8 +35,12 @@
       <p>Die folgenden Daten wurden erfolgreich registriert:</p>
 
       <ul>
-        <li><strong>Art der Kleidung:</strong> <span id="out-kleidung"></span></li>
-        <li><strong>Krisengebiet:</strong><span id="out-krisengebiet"></span></li>
+        <li>
+          <strong>Art der Kleidung:</strong> <span id="out-kleidung"></span>
+        </li>
+        <li>
+          <strong>Krisengebiet:</strong><span id="out-krisengebiet"></span>
+        </li>
         <li><strong>Ort:</strong><span id="out-ort"></span></li>
         <li><strong>Datum:</strong><span id="out-datum"></span></li>
         <li><strong>Uhrzeit:</strong><span id="out-uhrzeit"></span></li>
@@ -65,30 +64,28 @@
       <p>&copy; 2025 Kleiderherz. Alle Rechte vorbehalten.</p>
     </footer>
 
-   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const params = new URLSearchParams(window.location.search);
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
 
-      const kleidungsart = params.get("kleidungsart");
-      const krisengebiet = params.get("krisengebiet");
-      const ort = params.get("ort");
-      const datum = params.get("datum");
-      const uhrzeit = params.get("uhrzeit");
+        const kleidungsart = params.get("kleidungsart");
+        const krisengebiet = params.get("krisengebiet");
+        const ort = params.get("ort");
+        const datum = params.get("datum");
+        const uhrzeit = params.get("uhrzeit");
 
-      const outKleidung = document.getElementById('out-kleidung');
-      const outKrisengebiet = document.getElementById('out-krisengebiet');
-      const outOrt = document.getElementById('out-ort');
-      const outDatum = document.getElementById('out-datum');
-      const outUhrzeit = document.getElementById('out-uhrzeit');
+        const outKleidung = document.getElementById("out-kleidung");
+        const outKrisengebiet = document.getElementById("out-krisengebiet");
+        const outOrt = document.getElementById("out-ort");
+        const outDatum = document.getElementById("out-datum");
+        const outUhrzeit = document.getElementById("out-uhrzeit");
 
-      if (outKleidung) outKleidung.innerText = kleidungsart;
-    if (outKrisengebiet) outKrisengebiet.innerText = krisengebiet;
-      if (outOrt) outOrt.innerText = ort;
-      if (outDatum) outDatum.innerText = datum;
-      if (outUhrzeit) outUhrzeit.innerText = uhrzeit;
-    });
-
-
-   </script> 
+        if (outKleidung) outKleidung.innerText = kleidungsart;
+        if (outKrisengebiet) outKrisengebiet.innerText = krisengebiet;
+        if (outOrt) outOrt.innerText = ort;
+        if (outDatum) outDatum.innerText = datum;
+        if (outUhrzeit) outUhrzeit.innerText = uhrzeit;
+      });
+    </script>
   </body>
 </html>
